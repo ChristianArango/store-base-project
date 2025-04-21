@@ -1,6 +1,6 @@
 
 import express from 'express'
-
+import cors from 'cors'
 import router from './routes/productRoutes.js';
 import authRouter from './routes/authRoutes.js';
 import path from 'path'
@@ -15,7 +15,7 @@ import errorHandler from './middlewares/errorHandler.js';
 
 const app=express()
 
-
+app.use(cors())
 
 app.use(morgan('dev')) //Middleware para registrar las peticiones HTTP en la consola
 
