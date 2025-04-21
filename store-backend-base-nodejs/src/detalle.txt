@@ -1,0 +1,32 @@
+Para que funciona cada modulo.
+
+src: 
+
+config
+    db.js: Se encarga de la configuración y conexión con la base de datos.
+
+controllers
+    productControllers.js: Contiene la lógica de negocio y maneja las solicitudes HTTP relacionadas con productos.
+
+models
+    productModels.js: Define la estructura del modelo de datos para los productos en la base de datos.
+
+routes
+    productRoutes.js: Define las rutas que exponen las funcionalidades del controlador.
+
+app.js: Configura la aplicación Express y define los middlewares.
+
+serverjs.js: Inicia el servidor y conecta con la base de datos.
+
+.env: Contiene variables de entorno, como credenciales y configuraciones sensibles.
+
+
+Archivo	Propósito
+src: El directorio src/ (source) en una API es una convención usada para organizar el código fuente de la aplicación. Su propósito es separar los archivos principales del proyecto (como package.json, .gitignore, README.md, etc.) del código real de la aplicación.
+config/db.js: Configuración y conexión a la base de datos.
+controllers/productControllers.js: Lógica de negocio y manejo de peticiones HTTP.
+models/productModels.js: Definición del esquema del producto en la base de datos.
+routes/productRoutes.js: Define las rutas que exponen la API.
+app.js: Configura Express y carga los middlewares.
+server.js: Inicia el servidor y conecta con la base de datos.
+.env: Contiene configuraciones y credenciales sensible
