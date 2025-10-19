@@ -1,115 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido a la Deepweb</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0d0d0d;
-            color: #e0e0e0;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-        .container {
-            max-width: 800px;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 69, 0, 0.3);
-            backdrop-filter: blur(15px);
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        h1 {
-            font-size: 3.5em;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            background: linear-gradient(45deg, #ff4500, #ff0066);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: pulse 2s infinite alternate;
-        }
-        p {
-            font-size: 1.3em;
-            margin: 15px 0;
-            opacity: 0.9;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background: linear-gradient(45deg, #ff4500, #ff0066);
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2em;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: transform 0.3s ease, background 0.3s ease;
-        }
-        .btn:hover {
-            transform: scale(1.1);
-            background: linear-gradient(45deg, #ff0066, #ff4500);
-        }
-        .glitch {
-            font-size: 1.1em;
-            text-transform: uppercase;
-            color: #ff4500;
-            text-shadow: 2px 2px 5px rgba(255, 0, 102, 0.7);
-            animation: glitch 1s infinite alternate;
-        }
-        @keyframes pulse {
-            from { transform: scale(1); }
-            to { transform: scale(1.05); }
-        }
-        @keyframes glitch {
-            0% { text-shadow: 2px 2px 5px rgba(255, 0, 102, 0.7); }
-            100% { text-shadow: -2px -2px 5px rgba(255, 69, 0, 0.7); }
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5em; }
-            p { font-size: 1.1em; }
-            .btn { font-size: 1em; padding: 12px 25px; }
-        }
-        .hidden-content {
-            display: none;
-            margin-top: 20px;
-        }
-    </style>
-    <script>
-        function showContent() {
-            document.getElementById("hidden-content").style.display = "block";
-            document.getElementById("discover-btn").style.display = "none";
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <title>Tienda Tech - Inicio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Bienvenido al inicio del fin</h1>
-        <p>Explora los misterios de la deepweb con nosotros.</p>
-        <p class="glitch">Tu curiosidad te ha traído aquí, ¿estás listo?</p>
-        <p>Si tienes preguntas, estamos aquí para responderlas.</p>
-        <a href="#" class="btn" id="discover-btn" onclick="showContent(); return false;">Descubre más</a>
-        <div class="hidden-content" id="hidden-content">
-            <p>La deepweb no es solo un mito, es un vasto universo de información oculta.</p>
-            <p>Desde bases de datos académicas hasta mercados oscuros, todo existe bajo la superficie.</p>
-            <p>¿Quieres seguir explorando? Prepárate para un viaje sin retorno.</p>
-        </div>
+  <header>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+  <main>
+    <div class="hero">
+      <h1>Bienvenido a Tienda Tech</h1>
+      <p>Explora lo último en computadoras, laptops, celulares y más.</p>
     </div>
-    
-    </div>
+    <section class="anadir-productos" id="add-productos-container">
+        <h2>Añadir Nuevos Productos</h2>
+        <form id="add-product-form">
+            <input type="text" id="product-name" placeholder="Nombre del Producto" required />
+            <input type="text" id="product-description" placeholder="Descripción del Producto" />
+            <input type="text" id="product-price" placeholder="Precio del Producto" />
+            <input type="text" id="product-stock" placeholder="Stock del Producto" />
+            <input type="text" id="product-sku" placeholder="SKU del Producto" required />
+
+            <button type="submit" id="btn-anadir-producto">Añadir Producto</button>
+
+        </form>
+    </section>
+    <section class="productos" id="productos-container">
+      <!-- Aquí van los productos dinámicos -->
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Tienda Tech - Todos los derechos reservados</p>
+    <p>
+      <i class="fas fa-envelope"></i> contacto@tiendatech.com |
+      <i class="fas fa-phone"></i> +51 987 654 321
+    </p>
+  </footer>
+  <script type="module" src="index.js"></script>
 </body>
 </html>
