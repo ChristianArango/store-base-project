@@ -93,6 +93,30 @@ main {
   transition: background-color 0.3s ease;
 }
 
+.btn-editar {
+  margin-top: 10px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-eliminar {
+  margin-top: 10px;
+  background-color: #fd0d0d;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 .btn-agregar:hover {
   background-color: #0b5ed7;
 }
@@ -168,3 +192,31 @@ footer i {
   margin-bottom: 8px;
   line-height: 1.6;
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+

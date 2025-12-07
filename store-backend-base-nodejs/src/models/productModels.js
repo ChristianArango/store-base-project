@@ -2,7 +2,7 @@ import pool from '../config/db.js'
 
 class ProductModel {
     static async getAllProducts() {
-        const resultado=await pool.query('SELECT * FROM products')
+        const resultado=await pool.query('SELECT * FROM products ORDER BY id ASC')
         return resultado.rows;
     }
 
